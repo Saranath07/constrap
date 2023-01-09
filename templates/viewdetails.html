@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Constrap</title>
+  <link rel="stylesheet" href="/static/css/viewdetails.css" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  
+
+</head>
+
+<body>
+    <header>
+      <div class="bx bx-menu" id="menu-icon"></div>
+    <a href="index.html" class="logo"><span>CONSTRAP</span></a>
+    <div class="booking_details">
+        
+        <div class="item">
+         <select id="options">
+          <option>Buy</option>
+          <option>Rent</option>
+          <option>Service</option>
+          <option>Rooms</option>
+         </select>
+        </div>
+        <div class="item">
+          <input type="text" class="input" placeholder="Enter Locality / City / Apartment ">
+          
+        </div>
+
+        <div class="item">
+          <div class="cta active">Search</div>
+        </div>
+        
+      </div>
+        <div class="main">
+        <button id="show-login"class="cta">Login / Register</button>
+        <div class="popup">
+          <div class="close-btn">&times;</div>
+          <div class="form">
+
+            <h2>Log in</h2>
+            <div class="form-element">
+              <label for="email">Email</label>
+              <input type="email" name="email" id="email" placeholder="Enter your email" />
+            </div>
+            <div class="form-element">
+              <label for="password">Password</label>
+              <input type="password" name="password" id="password" placeholder="Enter your password" />
+            </div>
+          <div class="form-element">
+            <button type="submit" class="btn">Log in</button>
+        </div>  
+        <div class="form-element">
+          <a href="#">Forgot password?</a>
+        </div>
+        <div class="form-element">
+          <center>
+          <br>
+          <a href="registration1.html">Don't have an account?</a>
+          </center>
+        </div>
+        </div>
+        </div>
+        </div>
+        
+    </header>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="contain">
+        <img src="/static/images/img1.jpg" alt="img1" width="400" height="300">
+        <img src="/static/images/img2.jpg" alt="img1" width="400" height="300">
+        <img src="/static/images/img3.jpg" alt="img1" width="400" height="300">
+        <div class="place">
+        <h1>Happiness Forever Nights</h1>
+        <p>Annanagar, Chennai  - 600040, Tamil Nadu.</p>
+        <div class="rating">
+            <br>
+            <h1>4.5</h1>
+            <p>Rating</p>
+          </div>
+        <br>
+        <h1>Description:</h1>
+        <p>Did you know that we’ve got 2.5 Crore bookings since March 2020? And this is all thanks to the sanitisation & safety measures followed at our properties, from disinfecting surfaces with high-quality cleaning products and maintaining social distance to using protective gear and more.
+
+            The accommodation boasts of a classy restaurant. There is a banquet hall as well. The rooms are tasteful and feature attractive furniture. The reception is amazingly designed and so are the hallways. The property is accented with wooden flooring.
+            
+            Location
+            This modern accommodation is conveniently located in Bhupatwala, Haridwar. Tourist attractions nearby include Tirupati Balaji Mandir, Gopal Ashram, Akhand Param Dham Ashram, Badrinath Mandir, Bharat Mata Temple, and Shiv Ganga Dham Ashram.
+            
+            Amenities
+            Modern amenities offered by the property include parking, daily housekeeping, CCTV security, card payment option, a refrigerator, a microwave, a toaster, power backup, free internet, and 24/7 check-in allowance. The rooms here have ACs, TVs, an electric kettle, and a fan. The property comes with a private entrance too.
+            
+            What's Nearby
+            Guests can explore nearby eating joints like Chai Kings, Atchayas Chettinadu Hotel, B Joint, Auto Biryani & Fast Food, and Subway.</p>
+            <br>
+            <h1>Amenities:</h1>
+            <br>
+            <ul>
+                <li>Free Wifi</li>
+                <li>Parking</li>
+                <li>Breakfast</li>
+                <li>TV</li>
+                <li>AC</li>
+            </ul>
+            <br>
+            <br>
+            <h1>Rating and Reviews:</h1>
+            <div class="container">
+                <div class="post">
+                  <div class="text">Thanks for rating us!</div>
+                </div>
+                <div class="star-widget">
+                  <input type="radio" name="rate" id="rate-5">
+                  <label for="rate-5" class="fas fa-star"></label>
+                  <input type="radio" name="rate" id="rate-4">
+                  <label for="rate-4" class="fas fa-star"></label>
+                  <input type="radio" name="rate" id="rate-3">
+                  <label for="rate-3" class="fas fa-star"></label>
+                  <input type="radio" name="rate" id="rate-2">
+                  <label for="rate-2" class="fas fa-star"></label>
+                  <input type="radio" name="rate" id="rate-1">
+                  <label for="rate-1" class="fas fa-star"></label>
+                  <form action="#">
+                    <div class="textarea">
+                      <textarea cols="30" placeholder="Describe your experience.."></textarea>
+                    </div>
+                    <div class="btn">
+                      <button type="submit">Post</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+    </div>
+
+
+    </div>
+</body>
+  <script>
+
+    document.querySelector("#show-login").addEventListener("click", function() {
+    document.querySelector(".popup").classList.add("active");
+});
+document.querySelector(".popup .close-btn").addEventListener("click", function() {
+    document.querySelector(".popup").classList.remove("active");
+});
+
+const btn = document.querySelector("button");
+      const post = document.querySelector(".post");
+      const widget = document.querySelector(".star-widget");
+      const editBtn = document.querySelector(".edit");
+      btn.onclick = ()=>{
+        widget.style.display = "none";
+        post.style.display = "block";
+        editBtn.onclick = ()=>{
+          widget.style.display = "block";
+          post.style.display = "none";
+        }
+        return false;
+      }
+  </script>
+</html>

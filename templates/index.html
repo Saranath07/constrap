@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Constrap</title>
+  <link rel="stylesheet" href="/static/css/style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+/>
+  
+
+</head>
+
+<body>
+    <header>
+      <div class="bx bx-menu" id="menu-icon"></div>
+    <a href="index.html" class="logo"><span>CONSTRAP</span></a>
+    <ul class="navbar">
+        <li><a class="active" href="index.html"><i class="ri-home-3-line"></i><span> Home</span></a></li>
+        <li><a href="contact.html"><i class="ri-newspaper-line"></i><span> Rentals</span></a></li>
+        <li><a href="#about"><i class="ri-group-line"></i><span> About Us</span></a></li>
+        <li><a href="login.html"><i class="ri-message-line"></i><span> Contact Us</span></a></li>
+    </ul>
+    <div class="menubar">
+
+      <div class="head">MENU</div>
+      <ol>
+        <li><a class="active" href="index.html"><i class="ri-home-3-line"></i><span> Home</span></a></li>
+        <li><a href="contact.html"><i class="ri-newspaper-line"></i><span> Blog</span></a></li>
+        <li> <div class="dropdown">
+          <button onclick="myFunction()" class="dropbtn">Rentals<i class="ri-arrow-drop-down-line"></i></button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="#">Apartments</a>
+            <a href="#">Duplex</a>
+            <a href="#">Individuals</a>
+          </div>
+        </div> </li>
+        <li><div class="dropdown1">
+          <button onclick="myFunction1()" class="dropbtn1">Commercials<i class="ri-arrow-drop-down-line"></i></button>
+          <div id="myDropdown1" class="dropdown-content1">
+            <a href="#">Gadowns</a>
+            <a href="#">__</a>
+          </div>
+        </div> </li>
+        <li><div class="dropdown2">
+          <button onclick="myFunction2()" class="dropbtn2">Services<i class="ri-arrow-drop-down-line"></i></button>
+          <div id="myDropdown2" class="dropdown-content2">
+            <a href="#">Cleaning</a>
+            <a href="#">Plumbing</a>
+            <a href="#">Electrician</a>
+            <a href="#">Carpenter</a>
+            <a href="#">Painting</a>
+            <a href="#">Marbles</a>
+            <a href="#">Maid</a>
+            <a href="#">Ceiling</a>
+          </div>
+        </div></li>
+        <li><div class="dropdown3">
+          <button onclick="myFunction3()" class="dropbtn3">Shops<i class="ri-arrow-drop-down-line"></i></button>
+          <div id="myDropdown3" class="dropdown-content3">
+            <a href="#">Tiles</a>
+            <a href="#">Steels</a>
+            <a href="#">Interior Designs</a>
+            <a href="#">Plumbing Items</a>
+            <a href="#">Marbles</a>
+            <a href="#">Wooden Works</a>
+            <a href="#">Bathroom Appliances</a>
+          </div>
+        </div></li>
+        <li><div class="dropdown4">
+          <button onclick="myFunction4()" class="dropbtn4">AR<i class="ri-arrow-drop-down-line"></i></button>
+          <div id="myDropdown4" class="dropdown-content4">
+            <a href="#">Latest News</a>
+            <a href="#">Blogs</a>
+            <a href="#">Feedbacks</a>
+          </div>
+        </div></li>
+        </li>
+      </ol>
+    </div>
+        <div class="main">
+        <button id="show-login"class="cta">{{state}}</button>
+        <div class="popup">
+          <div class="close-btn">&times;</div>
+          <div class="form">
+            <form action="/login" method="post">
+            <h2>Log in</h2>
+            <div class="form-element">
+              <label for="email">Email</label>
+              <input type="email" name="email" id="email" placeholder="Enter your email" />
+            </div>
+            <div class="form-element">
+              <label for="password">Password</label>
+              <input type="password" name="password" id="password" placeholder="Enter your password" />
+            </div>
+            <div class="form-element">
+            <button type="submit" class="btn">Log in</button>
+          </form>
+        </div>  
+        <div class="form-element">
+          <a href="#">Forgot password?</a>
+        </div>
+        <div class="form-element">
+          <center>
+          <br>
+          <a href="{{url_for('registration1')}}">Don't have an account?</a>
+          </center>
+        </div>
+        </div>
+        </div>
+        </div>
+        
+    </header>
+
+    <div class="cont">
+      <div class="hotel_content">
+          <br>
+          <br>
+          <br>
+          <br>
+          
+          <div class="info">
+            <center>
+            <h2>Book Rooms/Services online</h2>
+            <p>LIVE HASSLE FREE!!!</p>
+          </center>
+          </div>
+          <br>
+          <br>
+          <div class="booking_info">
+    
+            <div class="booking_details">
+        <form action="/search" method="post">
+              <div class="item">
+               <select name="options">
+                <option>Shops</option>
+                <option>Rent</option>
+                <option>Buy</option>
+                <option>Rooms</option>
+               </select>
+              </div>
+              <div class="item">
+                <input type="text" class="input" name="LCA" id="LCA" placeholder="Enter Locality / City / Apartment ">
+                
+              </div>
+
+              <div class="item">
+                <button id="show-login" name="clicked" value="Search" class="cta">Search</button>
+              </div>
+            </form>             
+            </div>
+          </div>
+    <div class="about">
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <center>
+      <h1>Frequently Searched Rooms</h1>
+    </center>
+      <br>
+      <div class="division">
+        <div class="secc">
+      <div class="slider">
+        <span id="slide-1"></span>
+        <span id="slide-2"></span>
+        <span id="slide-3"></span>
+        <div class="image-container">
+          <img src="/static/images/img1.jpg" class="slide" width="500" height="300" />
+          <img src="/static/images/img2.jpg" class="slide" width="500" height="300" />
+          <img src="/static/images/img3.jpg" class="slide" width="500" height="300" />
+        </div>
+        <div class="buttons">
+          <a href="#slide-1"></a>
+          <a href="#slide-2"></a>
+          <a href="#slide-3"></a>
+        </div>
+        </div>
+      </div>
+      </div>
+        <div class="secc">
+          <h2>Happiness Forever Nights</h2>
+          <p>Chennai, TamilNadu</p>
+          <h3>Rs. 5000 per month</h3>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <button class="cta">Book Now</button>
+          <button class="cta">View Details</button>
+          <br>
+          <br>
+          <br>
+
+      <br>
+      </div>
+      <div class="division">
+        <div class="secc">
+      <div class="slider">
+        <span id="slide-1"></span>
+        <span id="slide-2"></span>
+        <span id="slide-3"></span>
+        <div class="image-container">
+          <img src="/static/images/img1.jpg" class="slide" width="500" height="300" />
+          <img src="/static/images/img2.jpg" class="slide" width="500" height="300" />
+          <img src="/static/images/img3.jpg" class="slide" width="500" height="300" />
+        </div>
+        <div class="buttons">
+          <a href="#slide-1"></a>
+          <a href="#slide-2"></a>
+          <a href="#slide-3"></a>
+        </div>
+        </div>
+      </div>
+      </div>
+        <div class="secc">
+          <h2>Happiness Forever Nights</h2>
+          <p>Chennai, TamilNadu</p>
+          <h3>Rs. 5000 per month</h3>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <button class="cta">Book Now</button>
+          <button class="cta">View Details</button>
+          <br>
+          <br>
+          <br>
+
+      <br>
+      </div>
+      <div class="division">
+        <div class="secc">
+      <div class="slider">
+        <span id="slide-1"></span>
+        <span id="slide-2"></span>
+        <span id="slide-3"></span>
+        <div class="image-container">
+          <img src="/static/images/img1.jpg" class="slide" width="500" height="300" />
+          <img src="/static/images/img2.jpg" class="slide" width="500" height="300" />
+          <img src="/static/images/img3.jpg" class="slide" width="500" height="300" />
+        </div>
+        <div class="buttons">
+          <a href="#slide-1"></a>
+          <a href="#slide-2"></a>
+          <a href="#slide-3"></a>
+        </div>
+        </div>
+      </div>
+      </div>
+        <div class="secc">
+          <h2>Happiness Forever Nights</h2>
+          <p>Chennai, TamilNadu</p>
+          <h3>Rs. 5000 per month</h3>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <button class="cta">Book Now</button>
+          <button class="cta">View Details</button>
+          <br>
+          <br>
+          <br>
+
+      <br>
+      </div>
+      
+    </div>
+    
+        </div>
+        <footer>
+          <ul class="social_icon">
+            <li><a href="#" class="fb"><i class="ri-facebook-fill"></i></a></li>
+            <li><a href="#" class="tw"><i class="ri-twitter-fill"></i></a></li>
+            <li><a href="#" class="ig"><i class="ri-instagram-fill"></i></a></li>
+            <li><a href="#" class="yt"><i class="ri-youtube-fill"></i></a></li>
+          </ul>
+          <H2>CONSTRAP</H1>
+          <p>© 2023 All Rights Reserved</p>
+          
+        </footer>
+        <img src="/static/images/hotel.png" class="hotel">
+        <img src="/static/images/car1.png" class="car1">
+        <img src="/static/images/car2.png" class="car2">
+        <img src="/static/images/car3.png" class="car3">
+        <img src="/static/images/car4.png" class="car4">
+        <img src="/static/images/dog.gif" class="dog_1">
+        <img src="/static/images/cloud.png" class="cloud">
+        <img src="/static/images/cloud.png" class="cloud_2">
+        <img src="/static/images/cloud.png" class="cloud_3">
+        <img src="/static/images/cloud.png" class="cloud_4">
+      </div>
+      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+  <script>
+ let menu = document.querySelector("#menu-icon");
+    let menubar = document.querySelector(".menubar");
+    menu.onclick = () =>{
+      menu.classList.toggle('bx-x');
+      menubar.classList.toggle('open');
+    }
+    document.querySelector("#show-login").addEventListener("click", function() {
+    document.querySelector(".popup").classList.add("active");
+});
+document.querySelector(".popup .close-btn").addEventListener("click", function() {
+    document.querySelector(".popup").classList.remove("active");
+});
+
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+function myFunction1() {
+  document.getElementById("myDropdown1").classList.toggle("show1");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn1')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content1");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show1')) {
+        openDropdown.classList.remove('show1');
+      }
+    }
+  }
+}
+
+function myFunction2() {
+  document.getElementById("myDropdown2").classList.toggle("show2");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn2')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content2");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show2')) {
+        openDropdown.classList.remove('show2');
+      }
+    }
+  }
+}
+
+function myFunction3() {
+  document.getElementById("myDropdown3").classList.toggle("show3");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn3')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content3");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show3')) {
+        openDropdown.classList.remove('show3');
+      }
+    }
+  }
+}
+
+function myFunction4() {
+  document.getElementById("myDropdown4").classList.toggle("show4");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn4')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content4");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show4')) {
+        openDropdown.classList.remove('show4');
+      }
+    }
+  }
+} 
+  </script>
+</html>

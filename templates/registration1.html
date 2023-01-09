@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title>Constrap Registration Form</title>
+    <link rel="stylesheet" href="/static/css/style1.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="container">
+    <div class="title">BE A MEMBER OF CONSTRAP</div>
+    <div class="content">
+      <form action="/authentication" method="post" class="form">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Full Name</span>
+            <input type="text" name="Name" id="Name" placeholder="Enter your name" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Username</span>
+            <input type="text" name="Username" id="Username" placeholder="Enter your username" required>
+          </div>
+
+          <div class="input-box">
+            <span class="details">Email</span>
+            <input type="text" name="Email" id="Email" placeholder="Enter your email" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Phone Number</span>
+            <input type="text" name="PNo" id="PNo" placeholder="Enter your number" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Password</span>
+            <input type="text" name="Password" id="Password" placeholder="Enter your password" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Confirm Password</span>
+            <input type="text" name="CPassword" id="CPassword" placeholder="Confirm your password" required>
+          </div>
+        </div>
+
+        <div class="button">
+          <input id="OTP" type="submit" name="clicked" value="Send OTP">
+        </div>
+
+      </div>
+  </div>
+</form>
+<div class="popup">
+  <div class="close-btn">&times;</div>
+  <div class="form">
+    <form action="/otp" method="post">
+    <h2>ONE TIME PASSWORD</h2>
+    <div class="form-element">
+      <input type="text" name="OTP" id="OTP" placeholder="Enter your OTP" />
+      <div class="form-element">
+        <button type="submit" class="btn" name="clicked" value="Register">Register</button>
+    </div> 
+    </div>
+  </form>
+    <script>
+      document.querySelector("#OTP").addEventListener("click", function() {
+    document.querySelector(".popup").classList.add("active");
+});
+document.querySelector(".popup .close-btn").addEventListener("click", function() {
+    document.querySelector(".popup").classList.remove("active");
+});
+    </script>
+</body>
+</html>
